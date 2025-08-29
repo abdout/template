@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import ExpandButton from '@/components/atom/expand-button';
 import LogoCloud  from './logo-cloud';
@@ -28,8 +27,9 @@ export function Hero() {
                 <div className="max-w-7xl mx-auto text-center">
                     <div className="flex flex-col items-center gap-4 text-center">
                         <h1 className="font-heading font-black text-3xl sm:text-5xl md:text-6xl lg:text-[80px]">
-                            Grows begins here <br />
-                            with a right design
+                            <span className="block sm:inline">Grows begin</span>
+                            <span className="block sm:inline">here with a</span>
+                            <span className="block sm:inline">right design</span>
                         </h1>
                         <p className="max-w-xs md:max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8">
                             Great brand depends on getting the right diagnosis. Our experts diagnose and treat the toughest design challenges.
