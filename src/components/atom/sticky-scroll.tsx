@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 interface StickyScrollProps {
   content: {
@@ -30,7 +30,7 @@ export const StickyScroll = ({ content, contentClassName }: StickyScrollProps) =
     });
 
     return () => unsubscribe();
-  }, [scrollYProgress, cardLength, content.length]);
+  }, [scrollYProgress, cardLength, content]);
 
   const backgroundColors = [
     "from-red-500/20 to-orange-500/20",
