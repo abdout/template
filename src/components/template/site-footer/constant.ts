@@ -1,16 +1,16 @@
 export const footerData = {
   product: [
-    "Changelog",
-    "Customer stories",
-    "Security",
-    "Chrome extension",
-    "iOS App",
-    "Android App",
-    "Zapier",
-    "Integromat",
+    "Web Design",
+    "Development",
+    "Branding",
+    "E-commerce",
+    "Mobile Apps",
+    "UI/UX Design",
+    "WordPress",
+    "Shopify",
   ],
-  company: ["About", "Careers", "Blog", "Startup program"],
-  attioFor: ["Startups", "Dear flow"],
-  support: ["Help Center", "Talk to support", "API docs", "System status"],
+  company: ["About", "Careers", "Blog", "Case Studies"],
+  attioFor: ["Startups", "Agencies"],
+  support: ["Help Center", "Contact", "Documentation", "Service Status"],
 };
 

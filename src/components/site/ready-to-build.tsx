@@ -6,36 +6,27 @@ import { Button } from "@/components/ui/button";
 
 function ReadyToBuildSection() {
   return (
-    <section className="flex flex-col md:flex-row justify-between gap-16 items-center !bg-[#266DF0]  px-4 md:px-[94px]">
-      <div>
-        <p
-          className={cn(
-           
-            "text-[40px] leading-tight md:leading-normal text-[#A0BFF8]"
-          )}
-        >
-          Ready to build your team&apos;s{" "}
-          <span className="text-white">dream CRM?</span>
-        </p>
-        <div className="flex gap-[12px] justify-start mt-[32px]">
-          <Button
-            variant="secondary"
-            size="sm"
-            className="rounded-[12px]"
-          >
-            Start for free
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            className="rounded-[12px]"
-          >
-            Talk to sales
-          </Button>
+    <section className="flex flex-col md:flex-row justify-between gap-2 items-center !bg-[#266DF0] p-12 full-bleed">
+      <div className="container-responsive">
+       
+        
+        <blockquote className="text-[#A0BFF8] text-lg leading-relaxed max-w-xl mb-6">
+          "This platform transformed how we manage client relationships. The intuitive design and powerful features helped us scale from a small agency to serving Fortune 500 companies."
+        </blockquote>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+            <span className="text-white font-semibold text-lg">JD</span>
+          </div>
+          <div>
+            <p className="text-white font-semibold">John Davis</p>
+            <p className="text-[#A0BFF8] text-sm">CEO, PixelCraft Studios</p>
+          </div>
         </div>
+        
+    
       </div>
       <div>
-        <Image src="/site/ready.png" alt="security" width={500} height={500} />
+        <Image src="/site/ready.png" alt="security" width={500} height={500} className="pr-5" />
       </div>
     </section>
   );

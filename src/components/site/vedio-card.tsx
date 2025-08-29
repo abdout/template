@@ -72,7 +72,7 @@ const VideoCard = ({
 
         {/* Video/Image Section - Right for horizontal, top for vertical */}
         <div className={`${isVertical ? 'w-full' : 'lg:w-[60%]'} bg-gray-900 dark:bg-black overflow-hidden`}>
-          <div className="relative h-40 lg:h-full min-h-[300px]">
+          <div className="relative h-40 lg:h-full min-h-[250px]">
             <video
               className="w-full h-full object-cover pointer-events-none"
               autoPlay

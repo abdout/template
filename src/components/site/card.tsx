@@ -20,7 +20,7 @@ const FeatureCard = ({
 }: FeatureCardProps) => {
   return (
     <div className={cn(
-      "rounded-2xl border-1 p-6 aspect-square flex flex-col justify-center",
+      "rounded-2xl border-1 py-6 aspect-auto flex flex-col justify-center px-6",
       borderColor,
       "bg-transparent",
       className
@@ -51,43 +51,36 @@ const FeatureCards = () => {
   const features = [
     {
       number: "01",
-      title: "Instant",
-      subtitle: "booking",
+      title: "Discovery",
+      subtitle: "& Research",
       borderColor: "border-blue-500",
       strokeColor: "#3b82f6"
     },
     {
       number: "02", 
-      title: "Expert",
-      subtitle: "doctors",
+      title: "Design",
+      subtitle: "& Prototyping",
       borderColor: "border-cyan-500",
       strokeColor: "#06b6d4"
     },
     {
       number: "03",
-      title: "Digital",
-      subtitle: "records", 
+      title: "Development",
+      subtitle: "& Testing", 
       borderColor: "border-teal-500",
       strokeColor: "#14b8a6"
     },
     {
       number: "04",
-      title: "Smart",
-      subtitle: "reminders",
+      title: "Launch",
+      subtitle: "& Support",
       borderColor: "border-emerald-500",
       strokeColor: "#10b981"
-    },
-    {
-      number: "05",
-      title: "Patient",
-      subtitle: "support",
-      borderColor: "border-green-500",
-      strokeColor: "#22c55e"
     }
   ]
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 items-center mt-20">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-2 items-center mt-20 ">
       {features.map((feature, index) => (
         <FeatureCard
           key={index}

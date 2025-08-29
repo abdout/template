@@ -35,10 +35,10 @@ export function Hero() {
                             Effective treatment depends on getting the right diagnosis. Our experts diagnose and treat the toughest medical challenges.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 items-center mt-2">
-                            <ExpandButton variant="default" href="/appointment" >
+                            <ExpandButton variant="default" href="/appointment" className="hover:shadow-[4px_4px_0px_black]">
                                 Appointment
                             </ExpandButton>
-                            <ExpandButton variant="outline" href="/services">
+                            <ExpandButton variant="outline" href="/services" className="hover:shadow-[4px_4px_0px_black]">
                                 Services
                             </ExpandButton>
                         </div>
