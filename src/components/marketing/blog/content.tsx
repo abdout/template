@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -75,9 +76,11 @@ export default function BlogContent() {
         {blogPosts.map((post) => (
           <Card key={post.id} className="overflow-hidden transition-all hover:shadow-lg">
             <div className="aspect-video overflow-hidden">
-              <img
+              <Image
                 src={post.image}
                 alt={post.title}
+                width={400}
+                height={250}
                 className="h-full w-full object-cover transition-transform hover:scale-105"
               />
             </div>
