@@ -2,7 +2,7 @@
 
 import { auth } from "@/auth";
 import { db } from "@/lib/db";
-import { userNameSchema } from "@/components/marketing/pricing/lib/validations/user";
+import { userNameSchema } from "@/components/site/pricing/lib/validations/user";
 import { revalidatePath } from "next/cache";
 
 export type FormData = {

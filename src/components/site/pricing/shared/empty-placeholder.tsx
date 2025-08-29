@@ -3,7 +3,9 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/marketing/pricing/shared/icons";
 
-interface EmptyPlaceholderProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface EmptyPlaceholderProps extends React.HTMLAttributes<HTMLDivElement> {
+  children?: React.ReactNode;
+}
 
 export function EmptyPlaceholder({
   className,
@@ -53,7 +55,9 @@ EmptyPlaceholder.Icon = function EmptyPlaceholderIcon({
 };
 
 interface EmptyPlaceholderTitleProps
-  extends React.HTMLAttributes<HTMLHeadingElement> {}
+  extends React.HTMLAttributes<HTMLHeadingElement> {
+  children?: React.ReactNode;
+}
 
 EmptyPlaceholder.Title = function EmptyPlaceholderTitle({
   className,
@@ -68,7 +72,9 @@ EmptyPlaceholder.Title = function EmptyPlaceholderTitle({
 };
 
 interface EmptyPlaceholderDescriptionProps
-  extends React.HTMLAttributes<HTMLParagraphElement> {}
+  extends React.HTMLAttributes<HTMLParagraphElement> {
+  children?: React.ReactNode;
+}
 
 EmptyPlaceholder.Description = function EmptyPlaceholderDescription({
   className,

@@ -1,9 +1,9 @@
 "use server";
 
 import { auth } from "@/auth";
-import { stripe } from "@/components/marketing/pricing/lib/stripe";
-import { getUserSubscriptionPlan } from "@/components/marketing/pricing/lib/subscription";
-import { absoluteUrl } from "@/components/marketing/pricing/lib/utils";
+import { stripe } from "@/components/site/pricing/lib/stripe";
+import { getUserSubscriptionPlan } from "@/components/site/pricing/lib/subscription";
+import { absoluteUrl } from "@/components/site/pricing/lib/utils";
 import { redirect } from "next/navigation";
 
 export type responseAction = {

@@ -1,4 +1,3 @@
-// @ts-nocheck
 // TODO: Fix this when we turn strict mode on.
 
 import { toc } from "mdast-util-toc"
@@ -7,11 +6,20 @@ import { visit } from "unist-util-visit"
 
 const textTypes = ["text", "emphasis", "strong", "inlineCode"]
 
-function flattenNode(node) {
-  const p = []
-  visit(node, (node) => {
+interface Node {
+  type: string;
+  value?: string;
+  children?: Node[];
+  url?: string;
+}
+
+function flattenNode(node: Node): string {
+  const p: string[] = []
+  visit(node, (node: Node) => {
     if (!textTypes.includes(node.type)) return
-    p.push(node.value)
+    if (node.value) {
+      p.push(node.value)
+    }
   })
   return p.join(``)
 }
@@ -26,13 +34,19 @@ interface Items {
   items?: Item[]
 }
 
-function getItems(node, current): Items {
+interface CurrentItem {
+  url?: string;
+  title?: string;
+  items?: Items[];
+}
+
+function getItems(node: Node, current: CurrentItem): Items {
   if (!node) {
     return {}
   }
 
   if (node.type === "paragraph") {
-    visit(node, (item) => {
+    visit(node, (item: Node) => {
       if (item.type === "link") {
         current.url = item.url
         current.title = flattenNode(node)
@@ -47,13 +61,13 @@ function getItems(node, current): Items {
   }
 
   if (node.type === "list") {
-    current.items = node.children.map((i) => getItems(i, {}))
+    current.items = node.children?.map((i: Node) => getItems(i, {})) || []
 
     return current
   } else if (node.type === "listItem") {
-    const heading = getItems(node.children[0], {})
+    const heading = getItems(node.children?.[0] || {}, {})
 
-    if (node.children.length > 1) {
+    if (node.children && node.children.length > 1) {
       getItems(node.children[1], heading)
     }
 
@@ -63,7 +77,7 @@ function getItems(node, current): Items {
   return {}
 }
 
-const getToc = () => (node, file) => {
+const getToc = () => (node: Node, file: { data: Items }) => {
   const table = toc(node)
   file.data = getItems(table.map, {})
 }

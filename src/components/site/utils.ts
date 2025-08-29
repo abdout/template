@@ -5,20 +5,6 @@ export function getCurrentDomain(): string {
   return '';
 }
 
-export function getSubdomain(domain: string): string | null {
-  const parts = domain.split('.');
-  if (parts.length > 2) {
-    return parts[0];
-  }
-  return null;
-}
-
-export function isValidSubdomain(subdomain: string): boolean {
-  // Basic validation for subdomain format
-  const subdomainRegex = /^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/;
-  return subdomainRegex.test(subdomain) && subdomain.length >= 2 && subdomain.length <= 63;
-}
-
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {

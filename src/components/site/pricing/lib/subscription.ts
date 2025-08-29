@@ -1,4 +1,3 @@
-// @ts-nocheck
 // TODO: Fix this when we turn strict mode on.
 import { pricingData } from "@/components/marketing/pricing/constants";
 import { db } from "@/lib/db";

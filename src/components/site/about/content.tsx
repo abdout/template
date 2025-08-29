@@ -1,13 +1,7 @@
 import { StickyScroll } from "@/components/atom/sticky-scroll";
-import type { School } from '../types';
 
-interface AboutContentProps {
-  school: School;
-}
-
-export default function AboutContent({ school }: AboutContentProps) {
-  // For now, we'll keep the content static
-  // Later, you can use the school data to make it dynamic
+export default function AboutContent() {
+  // Static content about the platform
   return (
     <div>
       <StickyScroll content={aboutContent} />
@@ -15,13 +9,11 @@ export default function AboutContent({ school }: AboutContentProps) {
   );
 }
 
-
-
 const aboutContent = [
   {
-    title: "The Castle of Hogwarts",
+    title: "Our Platform",
     description:
-      "Founded over a thousand years ago by the four greatest witches and wizards of the age, Hogwarts School of Witchcraft and Wizardry stands as a magnificent castle in the Scottish Highlands. Our ancient walls have witnessed countless magical moments and housed generations of extraordinary students.",
+      "A comprehensive platform designed to provide innovative solutions for modern businesses and organizations. Our platform offers cutting-edge features and tools to help you succeed in today's digital landscape.",
     content: (
       <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-lg">
         <img
@@ -29,15 +21,15 @@ const aboutContent = [
           width={400}
           height={300}
           className="h-full w-full object-cover"
-          alt="Harry Potter in the magical world"
+          alt="Platform overview"
         />
       </div>
     ),
   },
   {
-    title: "The Great Hall",
+    title: "Core Features",
     description:
-      "The heart of Hogwarts, where students gather for meals, celebrations, and the annual Sorting Ceremony. The enchanted ceiling reflects the sky above, and floating candles provide a magical ambiance. This is where house unity and school pride flourish.",
+      "Discover our powerful suite of features designed to streamline your workflow, enhance productivity, and drive growth. From automation to analytics, we provide everything you need to succeed.",
     content: (
       <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-lg">
         <img
@@ -45,15 +37,15 @@ const aboutContent = [
           width={400}
           height={300}
           className="h-full w-full object-cover"
-          alt="The trio of friends at Hogwarts"
+          alt="Core features showcase"
         />
       </div>
     ),
   },
   {
-    title: "Gryffindor House",
+    title: "Innovation First",
     description:
-      "Home to the brave and daring, Gryffindor House values courage, chivalry, and determination. Founded by Godric Gryffindor, this house has produced some of the most famous witches and wizards, including Harry Potter himself.",
+      "We believe in pushing the boundaries of what's possible. Our platform combines cutting-edge technology with user-friendly design to deliver solutions that are both powerful and accessible.",
     content: (
       <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-destructive to-primary">
         <img
@@ -61,15 +53,15 @@ const aboutContent = [
           width={400}
           height={300}
           className="h-full w-full object-cover"
-          alt="Students in Hogwarts uniforms"
+          alt="Innovation showcase"
         />
       </div>
     ),
   },
   {
-    title: "Magical Studies",
+    title: "Advanced Technology",
     description:
-      "From Herbology in the greenhouses to Defense Against the Dark Arts, Hogwarts offers a comprehensive magical education. Students learn to brew potions, cast spells, and understand the mysteries of the magical world under expert guidance.",
+      "Built with the latest technologies and best practices, our platform ensures reliability, security, and performance. We continuously update and improve our systems to meet evolving needs.",
     content: (
       <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-secondary to-muted">
         <img
@@ -77,15 +69,15 @@ const aboutContent = [
           width={400}
           height={300}
           className="h-full w-full object-cover"
-          alt="Students learning magical studies"
+          alt="Technology showcase"
         />
       </div>
     ),
   },
   {
-    title: "The Bonds of Friendship",
+    title: "Community & Support",
     description:
-      "At Hogwarts, friendships are forged that last a lifetime. Through shared adventures, challenges, and magical discoveries, students form unbreakable bonds that support them through their darkest hours and greatest triumphs.",
+      "Join our growing community of users and developers. We provide comprehensive support, documentation, and resources to help you make the most of our platform and achieve your goals.",
     content: (
       <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary to-accent">
         <img
@@ -93,23 +85,7 @@ const aboutContent = [
           width={400}
           height={300}
           className="h-full w-full object-cover"
-          alt="The enduring friendship of Harry, Ron, and Hermione"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Quidditch Pitch",
-    description:
-      "The magical sport of Quidditch brings excitement and house rivalry to new heights. Our pitch has witnessed legendary matches and continues to be where young witches and wizards discover their passion for flying and the thrill of chasing the Golden Snitch.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-accent to-secondary">
-        <img
-          src="/ball.png"
-          width={400}
-          height={300}
-          className="h-full w-full object-contain p-8"
-          alt="Golden Snitch - the heart of Quidditch"
+          alt="Community and support"
         />
       </div>
     ),

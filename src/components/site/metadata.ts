@@ -1,22 +1,5 @@
 import type { Metadata } from 'next';
 
-export function generateSchoolMetadata(schoolName: string, schoolDescription?: string): Metadata {
-  return {
-    title: `${schoolName} - About`,
-    description: schoolDescription || `Learn more about ${schoolName} and our mission to provide quality education.`,
-    openGraph: {
-      title: `${schoolName} - About`,
-      description: schoolDescription || `Learn more about ${schoolName} and our mission to provide quality education.`,
-      type: 'website',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${schoolName} - About`,
-      description: schoolDescription || `Learn more about ${schoolName} and our mission to provide quality education.`,
-    },
-  };
-}
-
 export function generateDefaultMetadata(): Metadata {
   return {
     title: 'About Us',

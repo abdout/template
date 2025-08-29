@@ -13,7 +13,7 @@ export const projects: ProjectItem[] = [
   },
   {
     title: "Hogwarts",
-    description: "School automation, attendance, exams, grades and more",
+    description: "Organization automation, attendance, exams, grades and more",
     link: "hogwarts",
     image: "/site/hogwarts.png",
     imageDark: "/site/hogwarts-light.png",

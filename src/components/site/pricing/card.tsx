@@ -42,7 +42,7 @@ export function PricingCard({ offer, isYearly, userId, subscriptionPlan, userRol
             year={isYearly}
             offer={offer}
             subscriptionPlan={subscriptionPlan}
-            userRole={userRole as any}
+            userRole={userRole || ""}
           />
         )
       ) : (

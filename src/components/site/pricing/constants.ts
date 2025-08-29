@@ -51,7 +51,7 @@ export const pricingData: SubscriptionPlan[] = [
   },
   {
     title: "Pro",
-    description: "For growing schools",
+    description: "For growing organizations",
     benefits: [
       "Up to 500 students",
       "Unlimited teachers",
