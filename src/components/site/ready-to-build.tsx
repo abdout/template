@@ -11,7 +11,7 @@ function ReadyToBuildSection() {
        
         
         <blockquote className="text-[#A0BFF8] text-lg leading-relaxed max-w-xl mb-6">
-          "This platform transformed how we manage client relationships. The intuitive design and powerful features helped us scale from a small agency to serving Fortune 500 companies."
+          &ldquo;This platform transformed how we manage client relationships. The intuitive design and powerful features helped us scale from a small agency to serving Fortune 500 companies.&rdquo;
         </blockquote>
         <div className="flex items-center gap-3 mb-6">
           <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">

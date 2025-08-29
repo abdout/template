@@ -32,7 +32,7 @@ export function Hero() {
                             with a right design
                         </h1>
                         <p className="max-w-xs md:max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-                            Effective treatment depends on getting the right diagnosis. Our experts diagnose and treat the toughest medical challenges.
+                            Great brand depends on getting the right diagnosis. Our experts diagnose and treat the toughest design challenges.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 items-center mt-2">
                             <ExpandButton variant="default" href="/appointment" className="hover:shadow-[4px_4px_0px_black]">

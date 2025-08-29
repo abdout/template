@@ -79,7 +79,7 @@ export default function VideoCardDemo() {
               <li><code>description</code> - Detailed description text</li>
               <li><code>ctaText</code> - Primary call-to-action button text</li>
               <li><code>secondaryCtaText</code> - Secondary button text</li>
-              <li><code>videoSrc</code> - Optional video source URL (defaults to "/site/dream.mp4")</li>
+              <li><code>videoSrc</code> - Optional video source URL (defaults to &quot;/site/dream.mp4&quot;)</li>
               <li><code>videoPoster</code> - Optional video poster image</li>
               <li><code>className</code> - Optional additional CSS classes</li>
             </ul>
@@ -106,7 +106,7 @@ export default function VideoCardDemo() {
               <li>Loop: Video continuously loops for seamless background content</li>
               <li>Muted: Video plays without sound (required for autoplay in most browsers)</li>
               <li>No Controls: Clean interface without play/pause/fullscreen buttons</li>
-              <li>Default Source: Uses "/site/dream.mp4" if no videoSrc is provided</li>
+              <li>Default Source: Uses &quot;/site/dream.mp4&quot; if no videoSrc is provided</li>
             </ul>
           </div>
         </div>
