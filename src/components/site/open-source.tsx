@@ -25,10 +25,10 @@ const OpenSource = () => {
             .{" "}
           </p>
           <div className="flex flex-col items-center">
-            <div className="flex h-10 items-center rounded-md border border-white bg-white px-4 font-medium">
+            <div className="flex h-10 items-center rounded-md border border-muted bg-muted px-4 font-medium">
               Contributors
             </div>
-            <div className="h-4 w-4 border-x-8 border-t-8 border-b-0 border-solid border-white border-x-transparent"></div>
+            <div className="h-4 w-4 border-x-8 border-t-8 border-b-0 border-solid border-muted border-x-transparent"></div>
           </div>
           <Contributors />
           {/* <Landing /> */}

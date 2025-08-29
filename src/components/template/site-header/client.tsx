@@ -29,7 +29,7 @@ export default function SiteHeaderClient({ isAuthenticated }: SiteHeaderProps) {
         transition-[top,width,max-width,background-color,border-radius,box-shadow] duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
         ${isScrolled 
           ? 'top-0 w-screen max-w-none bg-background rounded-none shadow-none' 
-          : 'top-4 max-w-7xl bg-white rounded-2xl shadow-sm'
+          : 'top-4 max-w-7xl bg-muted rounded-2xl shadow-sm'
         }
       `}
     >
