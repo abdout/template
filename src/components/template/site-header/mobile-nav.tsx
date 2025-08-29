@@ -1,47 +1,57 @@
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 import { MainNavItem } from "./type"
 import { siteConfig } from "./constant"
 import { cn } from "@/lib/utils"
 import { useLockBody } from "./use-lock-body"
-import { Icons } from "./icons"
 
 interface MobileNavProps {
   items: MainNavItem[]
   children?: React.ReactNode
+  onClose?: () => void
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
-  useLockBody()
+export const MobileNav = React.forwardRef<HTMLDivElement, MobileNavProps>(
+  ({ items, children, onClose }, ref) => {
+    useLockBody()
 
-  return (
-    <div
-      className={cn(
-        "fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden"
-      )}
-    >
-      <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
-        <Link href="/" className="flex items-center space-x-2">
-          <Icons.logo />
-          <span className="font-bold">{siteConfig.name}</span>
-        </Link>
-        <nav className="grid grid-flow-row auto-rows-max text-sm">
-          {items.map((item, index) => (
-            <Link
-              key={index}
-              href={item.disabled ? "#" : item.href}
-              className={cn(
-                "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
-                item.disabled && "cursor-not-allowed opacity-60"
-              )}
-            >
-              {item.title}
-            </Link>
-          ))}
-        </nav>
-        {children}
+    return (
+      <div
+        className={cn(
+          "fixed inset-0 top-12 z-50 grid h-[calc(100vh-3rem)] grid-flow-row auto-rows-max overflow-auto shadow-md animate-in slide-in-from-bottom-80 md:hidden"
+        )}
+        onClick={onClose}
+      >
+        <div 
+          ref={ref}
+          className="relative z-20 grid gap-6 bg-popover text-popover-foreground shadow-md w-screen py-6 px-4"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Link href="/" className="flex items-center space-x-2">
+            <Image src="/site/logo.png" alt="Logo" width={16} height={16} className="dark:invert" />
+            <span className="font-bold">{siteConfig.name}</span>
+          </Link>
+          <nav className="grid grid-flow-row auto-rows-max text-sm">
+            {items.map((item, index) => (
+              <Link
+                key={index}
+                href={item.disabled ? "#" : item.href}
+                className={cn(
+                  "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
+                  item.disabled && "cursor-not-allowed opacity-60"
+                )}
+              >
+                {item.title}
+              </Link>
+            ))}
+          </nav>
+          {children}
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
+)
+
+MobileNav.displayName = "MobileNav"
