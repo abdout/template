@@ -34,7 +34,7 @@ export default function SiteHeaderClient({ isAuthenticated }: SiteHeaderProps) {
         transition-[width,max-width,background-color,border-radius,box-shadow] duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
         ${isScrolled 
           ? 'w-full bg-background rounded-none shadow-none' 
-          : 'max-w-7xl mx-auto bg-muted rounded-2xl shadow-sm'
+          : 'w-fit mx-auto bg-muted rounded-2xl shadow-sm'
         }
       `}>
         <div className="max-w-7xl mx-auto px-6">
