@@ -1,7 +1,7 @@
 'use client';
 
 import { ModeSwitcher } from './mode-switcher'
-import { LogoutButton } from '@/components/auth/logout-button'
+// import { LogoutButton } from '@/components/auth/logout-button'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
@@ -18,7 +18,7 @@ export function RightActions({ isAuthenticated }: RightActionsProps) {
           variant="link"
           asChild
         >
-          <LogoutButton>Logout</LogoutButton>
+          {/* <LogoutButton>Logout</LogoutButton> */}
         </Button>
       ) : (
         <Link

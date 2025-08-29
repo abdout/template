@@ -5,8 +5,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/atom/theme-provider";
 import { Toaster } from "sonner";
-import { SessionProvider } from "next-auth/react";
-import { auth } from "@/auth";
+// import { SessionProvider } from "next-auth/react";
+// import { auth } from "@/auth";
 
 
 
@@ -20,7 +20,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await auth();
+  // const session = await auth();
   
   return (
     <html lang="en">
@@ -31,7 +31,7 @@ export default async function RootLayout({
           GeistMono.variable
         )}
       >
-        <SessionProvider session={session}>
+        {/* <SessionProvider session={session}> */}
          
             <ThemeProvider>
               <div className="layout-container">
@@ -41,7 +41,7 @@ export default async function RootLayout({
               </div>
             </ThemeProvider>
           
-        </SessionProvider>
+        {/* </SessionProvider> */}
       </body>
     </html>
   );
