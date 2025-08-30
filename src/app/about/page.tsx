@@ -1,4 +1,4 @@
-import About from '@/components/site/about/about'
+import About from '@/components/marketing/about/about'
 import React from 'react'
 
 
