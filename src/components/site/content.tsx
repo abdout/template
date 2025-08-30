@@ -16,7 +16,7 @@ export default function SiteContent() {
       <VideoCard
           logo="Story TELLER"
           title="AI Story Generation"
-          description="Transform your ideas into compelling stories with our advanced AI storytelling technology. Create engaging narratives, scripts, and content that captivates your audience."
+          description="Transform your ideas into compelling stories with our talented storytelling team. Create engaging narratives, scripts, and content that captivates your audience."
           ctaText="Start Writing"
           secondaryCtaText="Learn More"
           videoSrc="/site/story.mp4"
@@ -25,9 +25,9 @@ export default function SiteContent() {
         <VideoCard
           logo="Dream MACHINE"
           title="AI-Powered Video Creation"
-          description="Ideate, visualize, create videos, and share your dreams with the world, using our most powerful image and video AI models. Available now on iOS and the Web."
+          description="Bring your ideas to life — ideate, visualize, and design unique themes with ease. Share your dreams with the world using our intuitive wizard."
           ctaText="Try Now"
-          secondaryCtaText="Get App"
+          secondaryCtaText="Get Expert"
           videoSrc="/site/dream.mp4"
           videoPoster="/sample-poster.jpg"
         />
@@ -38,20 +38,20 @@ export default function SiteContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           <VideoCard
-            logo="ACME"
+            logo="CODEBASE"
             title="AI Story Generation"
-            description="Transform your ideas into compelling stories with our advanced AI storytelling technology. Create engaging narratives, scripts, and content that captivates your audience."
-            ctaText="Start Writing"
-            secondaryCtaText="Learn More"
+            description="Automate the boring. at Databayt we're building codebase for business automation."
+            ctaText="Databayt"
+            secondaryCtaText="Codebase"
             videoSrc="/site/codebase.mp4"
             videoPoster="/sample-poster.jpg"
             className="flex-col"
           />
           <VideoCard
-            logo=" CODEBASE"
+            logo=" ACME"
             title="AI-Powered Video Creation"
-            description="Ideate, visualize, create videos, and share your dreams with the world, using our most powerful image and video AI models. Available now on iOS and the Web."
-            ctaText="Try Now"
+            description="Company automation. managing projects, auto-generate reports, calculations, and docs"
+            ctaText="Live Preview"
             secondaryCtaText="Get App"
             videoSrc="/site/acme.mp4"
             videoPoster="/sample-poster.jpg"

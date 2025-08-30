@@ -37,12 +37,20 @@ const VideoCard = ({
               {/* Logo and Title */}
               <div className="space-y-6">
                 <div className="text-center lg:text-left">
-                  <div className="text-3xl lg:text-4xl font-serif">
-                    {logo.split(' ')[0]}
-                  </div>
-                  <div className="text-2xl lg:text-3xl font-bold uppercase tracking-wide">
-                    {logo.split(' ')[1]}
-                  </div>
+                  {logo.split(' ').length === 1 ? (
+                    <div className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
+                      {logo}
+                    </div>
+                  ) : (
+                    <>
+                      <div className="text-3xl lg:text-4xl font-serif">
+                        {logo.split(' ')[0]}
+                      </div>
+                      <div className="text-2xl lg:text-3xl font-bold uppercase tracking-wide">
+                        {logo.split(' ')[1]}
+                      </div>
+                    </>
+                  )}
                 </div>
                 
                 <p className="text-gray-700 dark:text-gray-300 text-base lg:text-lg leading-relaxed">
@@ -98,12 +106,20 @@ const VideoCard = ({
               {/* Logo and Title */}
               <div className="space-y-6">
                 <div className="text-center lg:text-left">
-                  <div className="text-3xl lg:text-4xl font-serif">
-                    {logo.split(' ')[0]}
-                  </div>
-                  <div className="text-2xl lg:text-3xl font-bold uppercase tracking-wide">
-                    {logo.split(' ')[1]}
-                  </div>
+                  {logo.split(' ').length === 1 ? (
+                    <div className="text-3xl lg:text-4xl font-bold uppercase tracking-wide">
+                      {logo}
+                    </div>
+                  ) : (
+                    <>
+                      <div className="text-3xl lg:text-4xl font-serif">
+                        {logo.split(' ')[0]}
+                      </div>
+                      <div className="text-2xl lg:text-3xl font-bold uppercase tracking-wide">
+                        {logo.split(' ')[1]}
+                      </div>
+                    </>
+                  )}
                 </div>
                 
                 <p className="text-gray-700 dark:text-gray-300 text-base lg:text-lg leading-relaxed">
