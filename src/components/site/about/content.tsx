@@ -4,16 +4,16 @@ const introduction = () => {
     return (
         <div className='space-y-6'>
             <h4 className='text-2xl leading-relaxed'>
-                Automate the boring. at Databayt we're building codebase for business automation, one atomic component at a time. Every line of code is open source, every contribution is valued, and every developer may shape the future of how businesses operate.
+                Automate the boring. at Databayt we&apos;re building codebase for business automation, one atomic component at a time. Every line of code is open source, every contribution is valued, and every developer may shape the future of how businesses operate.
             </h4>
             <h4 className='text-2xl leading-relaxed'>
-                We sell the origin of all value — we sell Time, the currency that drives the world — what if you could reclaim yours and focus on what truly matters? It's more than a service — it's an escape from the matrix. A restoration of time through the elimination of repetitive tasks, streamlined operations, and automated processes. Break free. Reclaim your hours.
+                We sell the origin of all value — we sell Time, the currency that drives the world — what if you could reclaim yours and focus on what truly matters? It&apos;s more than a service — it&apos;s an escape from the matrix. A restoration of time through the elimination of repetitive tasks, streamlined operations, and automated processes. Break free. Reclaim your hours.
             </h4>
             <h4 className='text-2xl leading-relaxed'>
-                The Repository of Wonders. Think of our codebase as a living library where every contribution becomes part of something greater. From atomic components to complete templates, from blocks to micro-services to full automation solutions—we're creating the building blocks that will power tomorrow's businesses.
+                The Repository of Wonders. Think of our codebase as a living library where every contribution becomes part of something greater. From atomic components to complete templates, from blocks to micro-services to full automation solutions—we&apos;re creating the building blocks that will power tomorrow&apos;s businesses.
             </h4>
             <h4 className='text-2xl leading-relaxed'>
-                Follow along as we figure this out together. This isn't just about building software; it's about creating a collaborative ecosystem where developers, businesses, and innovators unite to solve real problems. Every contribution you make doesn't just help one project—it becomes part of a growing foundation that serves countless businesses worldwide.
+                Follow along as we figure this out together. This isn&apos;t just about building software; it&apos;s about creating a collaborative ecosystem where developers, businesses, and innovators unite to solve real problems. Every contribution you make doesn&apos;t just help one project—it becomes part of a growing foundation that serves countless businesses worldwide.
             </h4>
         </div>
     )
@@ -58,7 +58,7 @@ const coreValues = () => {
             <p className='text-white/80'>Every decision, from technical architecture to business strategy, is documented and accessible to the community. We use GitHub to manage our codebase and discussions, ensuring transparency, traceability, and open collaboration. Contributions are publicly tracked, so every developer can see their impact and know the process is clear and fair. We believe this openness builds trust and enables better contributions.</p>
 
             <h4 className='text-xl font-medium'>Innovation</h4>
-            <p className='text-white/80'>Our best ideas come from our diverse community of developers, business professionals, and users. We actively encourage contributions and value every perspective. We're actively building in: Business Automation, Data Analytics, AI Agents, Blockchain, and Distributed Computing.</p>
+            <p className='text-white/80'>Our best ideas come from our diverse community of developers, business professionals, and users. We actively encourage contributions and value every perspective. We&apos;re actively building in: Business Automation, Data Analytics, AI Agents, Blockchain, and Distributed Computing.</p>
 
             <h4 className='text-xl font-medium'>Growth</h4>
             <p className='text-white/80'>We balance rapid innovation with long-term sustainability, ensuring our solutions remain robust and our business model benefits all stakeholders.</p>

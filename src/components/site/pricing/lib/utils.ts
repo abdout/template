@@ -96,7 +96,7 @@ export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
   return `${days}${timeOnly ? "" : " days ago"}`;
 };
 
-export async function fetcher<JSON = any>(
+export async function fetcher<JSON = unknown>(
   input: RequestInfo,
   init?: RequestInit,
 ): Promise<JSON> {
@@ -130,7 +130,7 @@ export function nFormatter(num: number, digits?: number) {
     { value: 1e18, symbol: "E" },
   ];
   const rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
-  var item = lookup
+  const item = lookup
     .slice()
     .reverse()
     .find(function (item) {

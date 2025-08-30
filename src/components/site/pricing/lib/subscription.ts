@@ -1,9 +1,8 @@
-// @ts-nocheck
 // TODO: Fix this when we turn strict mode on.
-import { pricingData } from "@/components/marketing/pricing/constants";
+import { pricingData } from "@/components/site/pricing/constants";
 import { db } from "@/lib/db";
-import { stripe } from "@/components/marketing/pricing/lib/stripe";
-import { UserSubscriptionPlan } from "types";
+import { stripe } from "@/components/site/pricing/lib/stripe";
+import { UserSubscriptionPlan } from "@/components/site/pricing/types";
 
 export async function getUserSubscriptionPlan(
   userId: string

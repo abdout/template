@@ -226,7 +226,7 @@ const About = () => {
         const boxCenterY = clickY - boxRect.height / 2;
         
         // Calculate the new box position, constrained to the valid range
-        let newBoxPosition = Math.max(0, Math.min(boxCenterY, maxBoxTravel));
+        const newBoxPosition = Math.max(0, Math.min(boxCenterY, maxBoxTravel));
         
         // Calculate the new scroll percentage
         const newPercentage = newBoxPosition / maxBoxTravel;
