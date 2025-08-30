@@ -1,16 +1,27 @@
 "use server";
 
-import { auth } from "@/auth";
-import { stripe } from "@/components/marketing/pricing/lib/stripe";
-import { getUserSubscriptionPlan } from "@/components/marketing/pricing/lib/subscription";
-import { absoluteUrl } from "@/components/marketing/pricing/lib/utils";
-import { redirect } from "next/navigation";
+// import { auth } from "@/auth";
+// import { stripe } from "@/components/site/pricing/lib/stripe";
+// import { getUserSubscriptionPlan } from "@/components/site/pricing/lib/subscription";
+// import { absoluteUrl } from "@/components/site/pricing/lib/utils";
+// import { redirect } from "next/navigation";
 
 export type responseAction = {
   status: "success" | "error";
   stripeUrl?: string;
 }
 
+// Mock implementation for template - replace with actual Stripe logic
+export async function generateUserStripe(priceId: string): Promise<responseAction> {
+  // Mock response for template
+  return {
+    status: "success",
+    stripeUrl: "https://template.example.com/checkout"
+  };
+}
+
+// Original implementation commented out for template
+/*
 const billingUrl = absoluteUrl("/starter/dashboard/billing")
 const pricingUrl = absoluteUrl("/pricing")
 
@@ -18,8 +29,14 @@ export async function generateUserStripe(priceId: string): Promise<responseActio
   let redirectUrl: string = "";
 
   try {
-    const session = await auth()
-    const user = session?.user;
+    // const session = await auth()
+    // const user = session?.user;
+
+    // Mock user for template - replace with actual auth
+    const user = {
+      id: "mock-user-id",
+      email: "user@example.com"
+    };
 
     if (!user || !user.email || !user.id) {
       throw new Error("Unauthorized");
@@ -69,3 +86,4 @@ export async function generateUserStripe(priceId: string): Promise<responseActio
   // no revalidatePath because redirect
   redirect(redirectUrl)
 }
+*/

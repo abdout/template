@@ -1,7 +1,7 @@
-import { SidebarNavItem, SiteConfig } from "types";
-import { env } from "@/env.mjs";
+import { SidebarNavItem, SiteConfig } from "@/components/site/pricing/types";
 
-const site_url = env.NEXT_PUBLIC_APP_URL;
+// Mock environment for template - replace with actual env.mjs
+const site_url = "https://template.example.com";
 
 export const siteConfig: SiteConfig = {
   name: "SaaS Starter",

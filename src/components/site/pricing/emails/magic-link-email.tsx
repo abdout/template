@@ -1,68 +1,64 @@
-import {
-  Body,
-  Button,
-  Container,
-  Head,
-  Hr,
-  Html,
-  Preview,
-  Section,
-  Tailwind,
-  Text,
-} from "@react-email/components";
+// import {
+//   Body,
+//   Button,
+//   Container,
+//   Head,
+//   Heading,
+//   Html,
+//   Link,
+//   Preview,
+//   Section,
+//   Tailwind,
+//   Text,
+// } from "@react-email/components";
 
-import { Icons } from "../shared/icons";
+// import { Icons } from "../shared/icons";
 
-type MagicLinkEmailProps = {
-  actionUrl: string;
-  firstName: string;
-  mailType: "login" | "register";
-  siteName: string;
-};
+// export const MagicLinkEmail = ({
+//   userEmail,
+//   url,
+// }: {
+//   userEmail: string;
+//   url: string;
+// }) => {
+//   return (
+//     <Html>
+//       <Head />
+//       <Preview>Log in to SaaS Starter</Preview>
+//       <Tailwind>
+//         <Body className="bg-white my-auto mx-auto font-sans">
+//           <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[20px] w-[465px]">
+//             <Heading className="text-black text-[24px] font-normal text-center p-0 my-[30px] mx-0">
+//               <strong>SaaS Starter</strong>
+//             </Heading>
+//             <Text className="text-black text-[14px] leading-[24px]">
+//               Hello,
+//             </Text>
+//             <Text className="text-black text-[14px] leading-[24px]">
+//               Click the link below to log in to SaaS Starter.
+//             </Text>
+//             <Section className="text-center mt-[32px] mb-[32px]">
+//               <Button
+//                 pX={20}
+//                 pY={12}
+//                 className="bg-[#000000] rounded-md text-white text-[12px] font-semibold no-underline text-center"
+//                 href={url}
+//               >
+//                 Join the team →
+//               </Button>
+//             </Section>
+//             <Text className="text-black text-[14px] leading-[24px]">
+//               or copy and paste this URL into your browser:{" "}
+//               <Link href={url} className="text-blue-600 no-underline">
+//                 {url}
+//               </Link>
+//             </Text>
+//           </Container>
+//         </Body>
+//       </Tailwind>
+//     </Html>
+//   );
+// };
 
-export const MagicLinkEmail = ({
-  firstName = "",
-  actionUrl,
-  mailType,
-  siteName,
-}: MagicLinkEmailProps) => (
-  <Html>
-    <Head />
-    <Preview>
-      The sales intelligence platform that helps you uncover qualified leads.
-    </Preview>
-    <Tailwind>
-      <Body className="bg-white font-sans">
-        <Container className="mx-auto py-5 pb-12">
-          <Icons.logo className="m-auto block size-10" />
-          <Text>Hi {firstName},</Text>
-          <Text>
-            Welcome to {siteName} ! Click the link below to{" "}
-            {mailType === "login" ? "sign in to" : "activate"} your account.
-          </Text>
-          <Section className="my-5 text-center">
-            <Button
-              className="inline-block rounded-md bg-zinc-900 px-4 py-2 text-white no-underline"
-              href={actionUrl}
-            >
-              {mailType === "login" ? "Sign in" : "Activate Account"}
-            </Button>
-          </Section>
-          <Text>
-            This link expires in 24 hours and can only be used once.
-          </Text>
-          {mailType === "login" ? (
-            <Text>
-              If you did not try to log into your account, you can safely ignore
-              it.
-            </Text>
-          ) : null}
-          <Hr className="my-4 border-t-2 border-gray-300" />
-          <Text className="text-gray-600">
-            123 Code Street, Suite 404, Devtown, CA 98765
-          </Text>
-        </Container>
-      </Body>
-    </Tailwind>
-  </Html>
-);
+// Mock export for template
+export const MagicLinkEmail = () => null;

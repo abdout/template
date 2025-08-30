@@ -1,38 +1,33 @@
 "use server";
 
-import { auth } from "@/auth";
-import { db } from "@/lib/db";
-import { userNameSchema } from "@/components/marketing/pricing/lib/validations/user";
+// import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
 
-export type FormData = {
-  name: string;
-};
-
-export async function updateUserName(userId: string, data: FormData) {
+export async function updateUserName(userId: string, name: string) {
   try {
-    const session = await auth()
+    // const session = await auth()
+    // const user = session?.user;
 
-    if (!session?.user || session?.user.id !== userId) {
+    // Mock user for template - replace with actual auth
+    const user = {
+      id: "mock-user-id",
+      email: "user@example.com"
+    };
+
+    if (!user) {
       throw new Error("Unauthorized");
     }
 
-    const { name } = userNameSchema.parse(data);
+    // Mock database update for template - replace with actual Prisma call
+    // await prisma.user.update({
+    //   where: { id: userId },
+    //   data: { name },
+    // });
 
-    // Update the user name.
-    await db.user.update({
-      where: {
-        id: userId,
-      },
-      data: {
-        username: name,
-      },
-    })
-
-    revalidatePath('/dashboard/settings');
-    return { status: "success" };
+    revalidatePath("/starter/dashboard/settings");
+    return { success: true };
   } catch (error) {
-    // console.log(error)
-    return { status: "error" }
+    // console.error("Failed to update user name:", error);
+    return { success: false, error: "Failed to update user name" };
   }
 }

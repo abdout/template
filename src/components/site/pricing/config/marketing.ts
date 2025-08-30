@@ -1,4 +1,4 @@
-import { MarketingConfig } from "types"
+import { MarketingConfig } from "@/components/site/pricing/types";
 
 export const marketingConfig: MarketingConfig = {
   mainNav: [

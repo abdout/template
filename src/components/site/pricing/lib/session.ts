@@ -1,12 +1,31 @@
-import "server-only";
+// import { db } from "@/components/site/pricing/lib/db";
+import { getUserSubscriptionPlan } from "@/components/site/pricing/lib/subscription";
 
-import { cache } from "react";
-import { auth } from "@/auth";
+// import { auth } from "@/auth";
 
-export const getCurrentUser = cache(async () => {
-  const session = await auth();
-  if (!session?.user) {
-    return undefined;
+export async function getSession() {
+  try {
+    // const session = await auth();
+    // const user = session?.user;
+
+    // Mock user for template - replace with actual auth
+    const user = {
+      id: "mock-user-id",
+      email: "user@example.com"
+    };
+
+    if (!user) {
+      return null;
+    }
+
+    const subscriptionPlan = await getUserSubscriptionPlan(user.id);
+
+    return {
+      user,
+      subscriptionPlan,
+    };
+  } catch (error) {
+    // console.error("Failed to get session:", error);
+    return null;
   }
-  return session.user;
-});
+}

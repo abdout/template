@@ -1,15 +1,13 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/marketing/pricing/shared/icons";
-
-interface EmptyPlaceholderProps extends React.HTMLAttributes<HTMLDivElement>
+import { Icons } from "@/components/site/pricing/shared/icons";
 
 export function EmptyPlaceholder({
   className,
   children,
   ...props
-}: EmptyPlaceholderProps) {
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
@@ -52,13 +50,10 @@ EmptyPlaceholder.Icon = function EmptyPlaceholderIcon({
   );
 };
 
-interface EmptyPlaceholderTitleProps
-  extends React.HTMLAttributes<HTMLHeadingElement>
-
 EmptyPlaceholder.Title = function EmptyPlaceholderTitle({
   className,
   ...props
-}: EmptyPlaceholderTitleProps) {
+}: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h3
       className={cn("mt-5 font-heading", className)}
@@ -67,13 +62,10 @@ EmptyPlaceholder.Title = function EmptyPlaceholderTitle({
   );
 };
 
-interface EmptyPlaceholderDescriptionProps
-  extends React.HTMLAttributes<HTMLParagraphElement>
-
 EmptyPlaceholder.Description = function EmptyPlaceholderDescription({
   className,
   ...props
-}: EmptyPlaceholderDescriptionProps) {
+}: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
     <p
       className={cn(

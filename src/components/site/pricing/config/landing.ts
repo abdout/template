@@ -1,4 +1,4 @@
-import { FeatureLdg, InfoLdg, TestimonialType } from "types";
+import { FeatureLdg, InfoLdg, TestimonialType } from "@/components/site/pricing/types";
 
 export const infos: InfoLdg[] = [
   {

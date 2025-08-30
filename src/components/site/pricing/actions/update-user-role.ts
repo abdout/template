@@ -1,40 +1,33 @@
 "use server";
 
+// import { auth } from "@/auth";
 import { revalidatePath } from "next/cache";
-import { auth } from "@/auth";
-import { UserRole } from "@prisma/client";
 
-import { prisma } from "@/components/marketing/pricing/lib/db";
-import { userRoleSchema } from "@/components/marketing/pricing/lib/validations/user";
-
-export type FormData = {
-  role: UserRole;
-};
-
-export async function updateUserRole(userId: string, data: FormData) {
+export async function updateUserRole(userId: string, role: string) {
   try {
-    const session = await auth();
+    // const session = await auth()
+    // const user = session?.user;
 
-    if (!session?.user || session?.user.id !== userId) {
+    // Mock user for template - replace with actual auth
+    const user = {
+      id: "mock-user-id",
+      email: "user@example.com"
+    };
+
+    if (!user) {
       throw new Error("Unauthorized");
     }
 
-    const { role } = userRoleSchema.parse(data);
+    // Mock database update for template - replace with actual Prisma call
+    // await prisma.user.update({
+    //   where: { id: userId },
+    //   data: { role },
+    // });
 
-    // Update the user role.
-    await prisma.user.update({
-      where: {
-        id: userId,
-      },
-      data: {
-        role: role,
-      },
-    });
-
-    revalidatePath("/dashboard/settings");
-    return { status: "success" };
+    revalidatePath("/starter/dashboard/settings");
+    return { success: true };
   } catch (error) {
-    // console.log(error)
-    return { status: "error" };
+    // console.error("Failed to update user role:", error);
+    return { success: false, error: "Failed to update user role" };
   }
 }
